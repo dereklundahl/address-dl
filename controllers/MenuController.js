@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const ContactController = require("./ContactController");
 
 module.exports = class MenuController {
   constructor(){
@@ -13,7 +14,7 @@ module.exports = class MenuController {
         ]
       }
     ];
-    this.contacts = [];
+    this.book = new ContactController();
     }
 
 
@@ -49,6 +50,10 @@ module.exports = class MenuController {
   exit() {
     console.log('Thanks for using Address-dl!');
     process.exit();
+  }
+
+  getContactCount(){
+    return this.contacts.length;
   }
 
 }
