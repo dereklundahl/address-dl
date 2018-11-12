@@ -2,6 +2,19 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
+<<<<<<< HEAD
+=======
+    return queryInterface.addColumn(
+      "Contacts",
+      "email",
+      {
+        type:Sequelize.STRING,
+        allowNull: true
+      }
+      
+    );
+    
+>>>>>>> assignment-3
     /*
       Add altering commands here.
       Return a promise to correctly handle asynchronicity.
@@ -12,6 +25,14 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
+<<<<<<< HEAD
+=======
+    return queryInterface.removeColumn(
+      "Contacts",
+      "email"
+    )
+    
+>>>>>>> assignment-3
     /*
       Add reverting commands here.
       Return a promise to correctly handle asynchronicity.
